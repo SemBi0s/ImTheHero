@@ -257,5 +257,17 @@ tabLevel[14].lore = "Tu as trouvé mon secret je ne peux rien te caché";
 tabLevel[14].isDeath = true;
 tabLevel[14].isSuccess = true;
 
+
+let preload = function (){
+    tabLevel.forEach(element => {
+        document.getElementById("main-container").innerHTML += `<img src=${element.imgPath} id="preload" alt=""> `;
+        document.getElementById("main-container").innerHTML -= `<img src=${element.imgPath} id="preload" alt=""> `;
+    });
+    constChoice.forEach(element => {
+        document.getElementById("main-container").innerHTML += `<img src=${element.imgPath} id="preload" alt=""> `;
+        document.getElementById("main-container").innerHTML -= `<img src=${element.imgPath} id="preload" alt=""> `;
+    });
+}
 //Display first page
+preload();
 tabLevel[0].display();
